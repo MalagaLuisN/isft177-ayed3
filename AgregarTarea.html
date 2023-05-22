@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="tareaInput">
+    <button onclick="agregarTarea()">Agregar tarea</button>
+    <ul id="listaTareas"></ul>
+    <script>
+        function agregarTarea() {
+          var tareaInput = document.getElementById("tareaInput");
+          var tarea = tareaInput.value;
+      
+          var listaTareas = document.getElementById("listaTareas");
+          var nuevaTarea = document.createElement("li");
+          nuevaTarea.appendChild(document.createTextNode(tarea));
+          listaTareas.appendChild(nuevaTarea);
+      
+          tareaInput.value = "";
+        }
+      </script>      
+</body>
+</html>
